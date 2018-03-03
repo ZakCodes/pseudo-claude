@@ -12,10 +12,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://gitlab.com/ZakCodes/pseudo-claude"
+    "url": "https://github.com/ZakCodes/pseudo-claude"
   },
   "bugs": {
-    "url": "https://gitlab.com/iotproject123/pseudo-claude/issues"
+    "url": "https://github.com/iotproject123/pseudo-claude/issues"
   },
   "license": "MIT",
   "engines": {
