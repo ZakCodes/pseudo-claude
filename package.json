@@ -1,0 +1,26 @@
+{
+  "name": "pseudo-claude",
+  "version": "1.1.0",
+  "description": "Grammaire pour le language pseudo-claude de Claude Gendron.",
+  "keywords": [
+    "pseudocode",
+    "Claude",
+    "Gendron",
+    "TSO",
+    "francais",
+    "français"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://gitlab.com/ZakCodes/pseudo-claude"
+  },
+  "bugs": {
+    "url": "https://gitlab.com/iotproject123/pseudo-claude/issues"
+  },
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0",
+    "node": "*"
+  },
+  "dependencies": {}
+}

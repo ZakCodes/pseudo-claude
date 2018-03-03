@@ -1,0 +1,123 @@
+fileTypes: [
+  "sdo"
+  "pseudo"
+  "pso"
+]
+foldingStartMarker: "/\\*\\*|\\{\\s*$"
+foldingStopMarker: "\\*\\*/|^\\s*\\}"
+name: "pseudo-claude"
+patterns: [
+  {
+    match: "(([\\<\\=]|[\\>\\=]|[\\<\\>]|[\\=\\=]){2}|([\\>]|[\\≠]|[\\<]){1})"
+    name: "keyword.operator.comparison.pseudo-claude"
+  }
+  {
+    match: "(?<![\\/|\\*])([\\+]|[\\-]|[\\*]|[\\/])(?![\\/|\\*])"
+    name: "keyword.operator.arithmetic.pseudo-claude"
+  }
+  {
+    match: "(vrai|faux|PAS|OU|ET)(?![a-z|A-Z])"
+    name: "keyword.operator.logical.pseudo-claude"
+  }
+  {
+    match: "\\="
+    name: "keyword.operator.assignment.pseudo-claude"
+  }
+  {
+    match: "\\b(Si|SinonSi|Sinon|alors|FinduSi|Selon que|Cas|Autrement|FinduSelonque|Répéter|Tant que|Jusqu'à|Pour|FinduPour)\\b"
+    name: "keyword.control.pseudo-claude"
+  }
+  {
+    match: "([\\(](?![\\)])){1}"
+    name: "meta.begin.brace.round.pseudo-claude"
+  }
+  {
+    match: "((?<![\\(])[\\)])"
+    name: "meta.end.brace.round.pseudo-claude"
+  }
+  {
+    match: "([\\(](?=[\\)])){1}"
+    name: "punctuation.definition.parameters.begin.bracket.round.pseudo-claude"
+  }
+  {
+    match: "((?<=[\\(])[\\)])"
+    name: "punctuation.definition.parameters.end.bracket.round.pseudo-claude"
+  }
+  {
+    match: "([,]{1})"
+    name: "punctuation.separator.list.pseudo-claude"
+  }
+  {
+    match: "([\\[])"
+    name: "meta.begin.brace.square.pseudo-claude"
+  }
+  {
+    match: "([\\]])"
+    name: "meta.end.brace.square.pseudo-claude"
+  }
+  {
+    match: "\\b(Let|PatternCount|Left|Right|input|output|open|close)\\b"
+    name: "support.function.pseudo-claude"
+  }
+  {
+    match: "(^(([a-zA-Z0-9])+(?=[\\(\\)]{2})))"
+    name: "entity.name.function.pseudo-claude"
+  }
+  {
+    match: "((([a-zA-Z0-9])+(?=[\\(\\)]{2}[\\r|\\n|\\r\\n])))"
+    name: "meta.function-call.pseudo-claude"
+  }
+  {
+    match: "((([A-Z0-9]*[a-z][a-z0-9]*[A-Z]|[a-z0-9]*[A-Z][A-Z0-9]*[a-z])[A-Za-z0-9]*))(?=\\[(.*?)\\])"
+    name: "meta.structure.list.pseudo-claude"
+  }
+  {
+    match: "(?<=\\[)(.*?)(?=\\])"
+    name: "meta.structure.list.item.pseudo-claude"
+  }
+  {
+    match: "\\b(début|fin)\\b"
+    name: "markup.bold.pseudo-claude"
+  }
+  {
+    match: "\\b(retour)\\b"
+    name: "entity.name.section.pseudo-claude"
+  }
+  {
+    match: "\\b(Declarations|count|EOF|eof)\\b(?![?!])"
+    name: "constant.language.pseudo-claude"
+  }
+  {
+    match: "(?=[:space:]*)\\b(string|num|InputFile|OutputFile)\\b"
+    name: "storage.type.language.pseudo-claude"
+  }
+  {
+    match: "(([A-Z0-9]*[a-z][a-z0-9]*[A-Z]|[a-z0-9]*[A-Z][A-Z0-9]*[a-z])[A-Za-z0-9]*)(?![\\(|\\[])"
+    name: "variable.parameter.pseudo-claude"
+  }
+  {
+    match: "((?<![a-z])([A-Z]{4,})(?![a-z]))"
+    name: "variable.other.constant.pseudo-claude"
+  }
+  {
+    match: "([\\/\\/]{2}.*)"
+    name: "comment.line.pseudo-claude"
+  }
+  {
+    begin: "\\/\\*.*"
+    end: ".*\\*\\/"
+    name: "comment.block.pseudo-claude"
+  }
+  {
+    begin: "\""
+    end: "\""
+    name: "string.quoted.double.pseudo-claude"
+    patterns: [
+      {
+        match: "\\\\."
+        name: "constant.character.escape.pseudo-claude"
+      }
+    ]
+  }
+]
+scopeName: "source.pseudo-claude"
