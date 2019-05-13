@@ -1,6 +1,6 @@
 {
   "name": "pseudo-claude",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Grammaire pour le language pseudo-claude de Claude Gendron.",
   "keywords": [
     "pseudocode",
